@@ -1,0 +1,36 @@
+section {
+    min-height: auto;
+    background-color: var(--pale-blue);
+}
+
+:host >>> p-card {
+  min-width: 30%;
+  margin-bottom: 20px;
+}
+
+:host >>> .contact-form {
+  width: 100%;
+}
+
+:host >>> .p-inputtext {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Optional: Adds space between the form fields and the button */
+}
+
+.message {
+  margin-top: 1rem;
+  color: green;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  :host >>> .contact-form {
+    margin: 0;
+  }
+}

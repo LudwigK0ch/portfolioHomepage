@@ -1,0 +1,56 @@
+<section id="contact" class="section centered column">
+  <h1>Contact me</h1>
+  <p-card styleClass="contact-form" class="flex justify-content-center">
+    <form [formGroup]="contactForm" (ngSubmit)="addMessage()" novalidate>
+      <div class="field">
+        <label for="Name" class="block">Name</label>
+        <input
+          type="text"
+          pInputText
+          placeholder="Name"
+          formControlName="name"
+        />
+      </div>
+      <div class="field">
+        <label for="email" class="block">E-Mail</label>
+        <input
+          type="text"
+          pInputText
+          placeholder="E-Mail"
+          formControlName="email"
+        />
+        <small
+          class="p-error block"
+          *ngIf="
+            contactForm.get('email')?.invalid && contactForm.get('email')?.dirty
+          "
+        >
+          Email is required</small
+        >
+      </div>
+
+      <h2>Message</h2>
+      <div class="field">
+        <textarea
+          rows="5"
+          cols="30"
+          pInputTextarea
+          [autoResize]="true"
+          formControlName="message"
+        >
+        </textarea>
+      </div>
+      <div class="button-container">
+        <button
+          pButton
+          type="submit"
+          label="Submit"
+          [disabled]="contactForm.invalid"
+        ></button>
+      </div>
+    </form>
+    <div *ngIf="message" class="message">
+      {{ message }}
+    </div>
+  </p-card>
+</section>
