@@ -8,9 +8,11 @@
   --eggplant: #A0006D;
 }
 
-body {
+html, body {
   margin: 0;
   font-family: 'Raleway';
+  width: auto!important;
+  overflow-x: hidden!important
 }
 
 .section {
