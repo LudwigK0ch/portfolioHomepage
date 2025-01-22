@@ -1,0 +1,57 @@
+<section id="about" class="section row">
+    <div id="about-me-div" class="about-div">
+      <div class="about-img centered">
+        <img [src]="profileImgUrl" alt="Ludwig Koch" />
+      </div>
+      <div class="about-description centered">
+        <h2>About me</h2>
+        <p [innerHTML]="description"></p>
+      </div>
+      <div class="about-icons centered">
+        <a
+          [href]="linkedInUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-linkedin linkedin-icon"></i>
+        </a>
+        <a [href]="setMailTo(emailAddress)">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </a>
+        <a href="../../assets/Resume.pdf" download="Resume.pdf">
+          <i class="fa-solid fa-file-pdf"></i>
+        </a>
+      </div>
+    </div>
+    <div class="about-div">
+      <h1 class="skill-set">Skill set</h1>
+      <div class="about-skill-section">
+        <p>Programming Languages</p>
+        <div class="skill-grid">
+          <img *ngFor="let programmingLanugage of programmingLanugages"
+          [src]="programmingLanugage.imgUrl"
+          [alt]="programmingLanugage.description"
+          [title]="programmingLanugage.description"/>
+        </div>
+      </div>
+      <div class="about-skill-section">
+        <p>Frameworks</p>
+        <div class="skill-grid">
+          <img *ngFor="let framework of frameworks"
+          [src]="framework.imgUrl"
+          [alt]="framework.description"
+          [title]="framework.description"/>
+        </div>
+      </div>
+      <div class="about-skill-section">
+        <p>Tools</p>
+        <div class="skill-grid">
+          <img *ngFor="let tool of tools"
+          [src]="tool.imgUrl"
+          [alt]="tool.description"
+          [title]="tool.description"/>
+        </div>
+      </div>
+    </div>
+  </section>
+  

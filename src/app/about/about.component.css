@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:900");
+@import url("../../styles.css");
+
+.section {
+  background-color: var(--primary-color);
+}
+
+.about-div {
+  width: 40%;
+  margin-inline: 5px;
+  background-color: var(--primary-color);
+}
+
+#about-me-div {
+  background-color: var(--pale-blue);
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-img {
+  flex-direction: column;
+  margin: 5px;
+}
+
+.about-img img {
+  border-radius: 50%;
+  border: outset 2px;
+  border-color: var(--royal-blue);
+  max-width: 200px;
+}
+
+.about-description {
+  flex-direction: column;
+}
+
+.about-description h2 {
+  padding: 0;
+  margin: 5px;
+  line-height: 1;
+}
+
+.about-description p {
+  display: block;
+  hyphens: auto;
+  text-align: center;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 1em;
+  margin-inline-end: 1em;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: var(--secondary-color);
+}
+.highlight-word {
+  color: var(--royal-blue);
+  font-weight: bold;
+}
+
+.about-icons {
+  flex-direction: row;
+  margin: 5px;
+}
+
+.about-icons i {
+  margin: 5px;
+  color: var(--royal-blue);
+  font-size: 40px;
+  transition: transform 0.3s ease;
+}
+
+.about-icons i:hover {
+  transform: scale(1.2);
+}
+
+.skill-set {
+  text-transform: uppercase;
+  color: var(--royal-blue);
+  font-size: 2em;
+  text-align: center;
+}
+
+.about-skill-section {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid var(--royal-blue);
+}
+
+.about-skill-section p {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1em;
+}
+
+.skill-grid {
+  display: flex;
+  max-height: 100%;
+  align-items: start;
+  justify-items: center;
+}
+
+.skill-grid img {
+  margin: 10px;
+  transition: filter 0.3s ease;
+  max-width: 70px;
+  width: calc(12% - 5px);
+  transition: transform 0.3s ease;
+}
+
+.skill-grid img:hover {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 1024px) {
+  .about-div {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 90%;
+    height: "auto";
+  }
+
+  .skill-grid img {
+    max-width: 60px;
+    width: calc(10% - 10px);
+  }
+}
