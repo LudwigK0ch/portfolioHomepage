@@ -1,0 +1,33 @@
+@import url("../../../node_modules/mdb-angular-ui-kit/assets/scss/mdb.scss");
+@import url("../../styles.css");
+
+section {
+  min-height: auto;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer .pi {
+  font-size: 1.5rem;
+}
+
+.footerBackground {
+  background: radial-gradient(
+    ellipse at bottom,
+    var(--royal-blue) 0%,
+    var(--pale-blue) 100%
+  );
+
+  padding-bottom: 20px;
+}
+
+.fab {
+  font-size: 2em;
+  color: var(--royal-blue);
+}
+
+.copyright-text {
+  color: var(--primary-color);
+}
