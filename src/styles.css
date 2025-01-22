@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root{
+  --primary-color: white;
+  --secondary-color: black;
+  --pale-blue: #EFFAFD;
+  --royal-blue: #4A8BDF;
+  --eggplant: #A0006D;
+}
+
+body {
+  margin: 0;
+  font-family: 'Raleway';
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+@media screen and (max-width: 1024px) {
+  .section {
+      flex-direction: column;
+  }
+}

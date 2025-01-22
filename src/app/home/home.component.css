@@ -1,0 +1,72 @@
+@import url("../../styles.css");
+
+.section {
+  color: var(--color-secondary);
+  background: radial-gradient(ellipse at bottom, var(--pale-blue) 10%, var(--royal-blue) 100%);
+}
+
+.animated-text {
+  margin: 0;
+  font-size: 3em;
+  color: white;
+  text-align: center;
+}
+
+.animated-text span {
+  background: url("https://t3.ftcdn.net/jpg/04/44/01/54/360_F_444015461_RSx2tDcrLmNFaOu2jP8JgFJurUrpysCR.jpg");
+  background-size: auto 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: shine 8s linear infinite;
+}
+
+.button-89 {
+  --b: 3px; /* border thickness */
+  --s: 0.5em; /* size of the corner */
+  --color: #ffffff;
+
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  margin-top: 10px;
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #ffffff00;
+  outline-offset: 0.6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}
+
+@keyframes shine {
+  from {
+    background-position: center 0;
+  }
+  to {
+    background-position: center 200%;
+  }
+}
