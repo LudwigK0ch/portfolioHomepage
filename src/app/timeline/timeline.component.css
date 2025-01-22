@@ -1,0 +1,41 @@
+.section {
+    min-height: 75vh;
+    background-color: var(--pale-blue);
+  }
+  
+  .section h1 {
+    font-size: 2.5em;
+    color: var(--royal-blue);
+    text-transform: uppercase;
+  }
+  
+  ::ng-deep .p-card {
+    margin: 10px;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    ::ng-deep .p-card {
+      margin: 5px;
+      text-align: left;
+    }
+    ::ng-deep .p-card-override .p-card-title {
+      font-size: 1em;
+    }
+  
+    ::ng-deep .p-card-override .p-card-subtitle {
+      font-size:1em;
+    }
+  
+    ::ng-deep .p-card-override .p-card-content {
+      font-size: 1em;
+    }
+
+    ::ng-deep .p-timeline-event-separator {
+      display: none;
+    }
+
+    ::ng-deep .p-timeline-event-content {
+      display: none;
+    }
+  }
+  

@@ -1,0 +1,15 @@
+<section id="timeline" class="section column">
+    <h1>Timeline</h1>
+    <p-timeline [value]="events" align="alternate">
+      <ng-template pTemplate="content" let-event>
+        <small class="p-text-secondary">{{ event.date }}</small>
+      </ng-template>
+      <ng-template pTemplate="opposite" let-event>
+          <p-card [header]="event.status" [subheader]="event.date" styleClass="p-card-override">
+              <p [innerHTML]="event.details">
+              </p>
+          </p-card>
+      </ng-template>
+    </p-timeline>
+  </section>
+  
