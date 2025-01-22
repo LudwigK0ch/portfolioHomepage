@@ -1,0 +1,92 @@
+@import url("../../styles.css");
+
+.section {
+  height: auto;
+}
+
+.section h1 {
+  font-size: 2.5em;
+  color: var(--royal-blue);
+  text-transform: uppercase;
+}
+
+.projectSection {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.projectSection div:nth-of-type(2n){
+  direction: rtl;
+}
+
+.projectSection div:nth-of-type(2n) p{
+  direction: ltr;
+}
+
+.project {
+  min-height: 30em;
+  display: flex;
+  margin: 10px;
+  border-top: solid var(--royal-blue) 2px;
+  background-color: var(--primary-color);
+  text-align: left;
+}
+
+.project div {
+  margin: 10px;
+  width: 50%;
+}
+
+.projectImage {
+  align-content: center;
+}
+
+.projectImage img {
+  height: 'auto';
+  max-width: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.projectDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+.projectDescription p {
+  font-size: 1.2em;
+}
+
+.fa-brands {
+  font-size: 3em;
+  margin: 5px;
+  color: var(--royal-blue);
+}
+
+@media screen and (max-width: 1024px) {
+  .project {
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .project div {
+    text-align: center;
+    width: 100%;
+    margin: 0px;
+  }
+
+  .projectImage img {
+    vertical-align: middle;
+    height: 'auto';
+    width: 100%;
+  }
+
+  .fa-brands {
+    font-size: 2em;
+  }
+}

@@ -1,0 +1,18 @@
+<section id="projects" class="section column">
+    <h1>Projects</h1>
+    <div class="projectSection">
+      <div class="project" *ngFor="let project of projects">
+        <div class="projectImage">
+          <img [src]="project.image" />
+        </div>
+        <div class="projectDescription">
+          <h2 [innerHTML]="project.title"></h2>
+          <p [innerHTML]="project.description"></p>
+          <a [href]="project.github" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
